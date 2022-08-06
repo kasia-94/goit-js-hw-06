@@ -12,10 +12,9 @@ btnDestroy.addEventListener("click", destroyBoxes);
 
 function createBoxes(amount) {
   amount = input.value;
-  let basicSize = 30;
   for (let i = 0; i < amount; i += 1) {
     let boxElement = document.createElement("div");
-    let sizeBox = basicSize + 10;
+    let sizeBox = 30 + (boxes.children.length - 1) * 10;
     boxElement.style.width = String(sizeBox) + "px";
     boxElement.style.height = String(sizeBox) + "px";
     boxElement.style.backgroundColor = getRandomHexColor();
